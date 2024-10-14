@@ -36,27 +36,24 @@ A streamlined Docker-based development environment for WordPress, featuring MySQ
 1. Clone this repository:
 2. Create a `.env` file in the project root and add your environment variables:
 
-ex:
-
+```
 APP_NAME=myapp
-
 DB_USER=wordpress
-
 DB_PASSWORD=your_password
-
 DB_ROOT_PASSWORD=your_root_password
-
+```
 
 
 3. Start the containers:
 
-docker-compose up -d
+```docker-compose up -d```
 
 
 4. Access WordPress at `http://localhost:8000`
 
 ## Project Structure
 
+```
 wordpress-docker-starter/
 ├── docker-compose.yml
 ├── .env
@@ -64,7 +61,7 @@ wordpress-docker-starter/
 ├── README.md
 ├── wordpress/
 └── mysql/
-
+```
 
 - `docker-compose.yml`: Defines the services (WordPress, MySQL)
 - `.env`: Contains environment variables for configuration
@@ -85,22 +82,22 @@ The project uses environment variables for configuration. These are defined in t
 
 ### Starting the Environment
 
-docker-compose up -d
+```docker-compose up -d```
 
 ### Stopping the Environment
 
-docker-compose down
+```docker-compose down```
 
 ### Viewing Logs
 
-docker-compose logs -f
+```docker-compose logs -f```
 
 
 ## Database Access
 
 To access the MySQL database via command line:
 
-docker exec -it ${APP_NAME}-mysql mysql -u ${DB_USER} -p${DB_PASSWORD}
+```docker exec -it ${APP_NAME}-mysql mysql -u ${DB_USER} -p${DB_PASSWORD}```
 
 Replace `${APP_NAME}`, `${DB_USER}`, and `${DB_PASSWORD}` with your actual values.
 
