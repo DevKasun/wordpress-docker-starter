@@ -1,0 +1,18 @@
+.env
+
+# Ignore MySQL data directory
+/mysql/
+
+# Ignore WordPress configuration file (contains sensitive information)
+/wordpress/wp-config.php
+
+# Ignore WordPress uploads directory (usually managed separately)
+/wordpress/wp-content/uploads/
+
+# Ignore cache and temporary files
+/wordpress/wp-content/cache/
+
+
+.DS_Store
+.idea/*
+.vscode
